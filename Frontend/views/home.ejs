@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Recommender</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Montserrat:wght@100;300;400;500;900&display=swap" rel="stylesheet">
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 class="main-heading">Movie Recommender</h1>
+      <div class="search-box">
+        <form action="/" method="post" autocomplete="off">
+        <input id="input" type="text" name="movie_title" placeholder="Search...">
+          <button type="submit" class="btn">Recommend</button>
+        </form>
+        <div id="autocomplete"></div>
+      </div>
+    </div>
+  </header>
+  
+  <% if (movieNotFound) {%>
+    <div class="movie-not-found">
+      Movie not found. Please search for a different movie.
+    </div>
+    <% } %> 
+
+  <script src="js/search_box.js"></script>
+</body>
+</html>

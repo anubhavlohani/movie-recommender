@@ -1,0 +1,8 @@
+index_local.js
+.env
+/node_modules
+/public/js/search_box old.js
+/public/css/home old.css
+/public/css/results old.css
+/views/results old.ejs
+/views/home old.ejs

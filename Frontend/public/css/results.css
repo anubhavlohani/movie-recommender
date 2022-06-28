@@ -1,0 +1,274 @@
+body {
+    background-color: #0F171E;
+    color: #FFF;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: clamp(1.2rem, 2vw, 2rem);
+    text-align: center;
+}
+
+body,
+h1,
+h2,
+h4,
+p {
+    margin: 0;
+}
+
+header,
+section {
+    padding: 1.5em 0;
+}
+
+@media (min-width: 40em) {
+    header,
+    section {
+        padding: 2em 0;
+    }
+}
+
+h2, h4 {
+    line-height: 1.2;
+}
+
+h2 {
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h4 {
+    font-family: "Prompt", sans-serif;
+    font-weight: 400;
+}
+
+img {
+    display: block;
+    margin-inline: auto;
+    max-width: 100%;
+}
+
+iframe {
+    max-width: 100%;
+}
+
+input {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 0.85em;
+    padding: 0.25em;
+    text-transform: capitalize;
+    width: 100%;
+}
+
+@media (min-width: 50em) {
+    input {
+        font-size: 1em;
+        width: 70%;
+    }
+}
+
+.container {
+    margin-inline: auto;
+    width: 90%;
+}
+
+::-webkit-scrollbar {
+    background: #0F171E;
+    border-radius: 5px;
+    width: .75rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ACACAC;
+    border-radius: 5px;
+}
+
+
+/* Heading and Search */
+
+#autocomplete {
+    max-height: 18rem;
+    overflow-y: auto;
+    position: absolute;
+    width: 65%;
+}
+
+@media (min-width: 40em) {
+    #autocomplete {
+        width: 60%;
+    }
+}
+
+.container-header {
+    max-width: 30rem;
+}
+
+.search-box {
+    display: inline-block;
+    margin-top: 3em;
+    width: 60%;
+}
+
+.autocomplete-items {
+    background-color: #F24C4C;
+    border: 2px solid #0F171E;
+    cursor: pointer;
+    font-size: 0.7em;
+    padding: 0.3em 1em;
+}
+
+.autocomplete-items:hover {
+    background-color: #C24040;
+}
+
+.btn {
+    background-color: #F24C4C;
+    border-radius: 3px;
+    border-style: none;
+    color: #FFF;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 0.85em;
+    margin: 0.5em;
+    padding: 0.4em;
+}
+
+.btn:hover {
+    background-color: #0F171E;
+    outline: 2px solid #F24C4C;
+    color: #fff;
+}
+
+
+
+
+/* Movie Details */
+
+#youtube-embed {
+    padding-top: 1em;
+    height: 14em;
+    width: 25em;
+    margin-inline: auto;
+}
+
+#details-poster {
+    border: 8px solid #FFF;
+    border-radius: 10px;
+    max-width: 12rem;
+}
+
+.h2-padded {
+    padding-top: 1em;
+}
+
+.h4-padded {
+    padding-block: 1em;
+}
+
+.text-left {
+    font-size: 80%;
+    text-align: left;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width: 50em) {
+    #youtube-embed {
+        height: 19rem;
+        width: 35rem;
+    }
+    #details-poster {
+        border: 8px solid #FFF;
+        border-radius: 10px;
+        max-width: 100%;
+    }
+    .h2-padded {
+        padding-top: 0;
+    }
+    .details-container {
+        font-size: 90%;
+    }
+    .details-grid {
+        column-gap: 2em;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .grid-col-span-2 {
+        grid-column: span 2;
+    }
+    .grid-row-span-2 {
+        grid-row: span 2;
+    }
+}
+
+
+/* Cast */
+
+.actor-grid {
+    display: grid;
+    column-gap: 1.5em;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 2em;
+    row-gap: 3em;
+}
+
+.actor-info-container {
+    background-color: #020202;
+    border-radius: 0 0 15px 15px;
+    display: flex;
+    font-size: 0.6em;
+    height: 20%;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    opacity: .85;
+}
+
+.character-name {
+    font-weight: 100;
+}
+
+.actor-image {
+    border-radius: 15px 15px 0 0;
+}
+
+@media (min-width: 40em) {
+    .actor-grid {
+        column-gap: 1em;
+        grid-template-columns: repeat(5, 1fr);
+        row-gap: 2em;
+    }
+}
+
+
+
+
+/* Recommendations */
+
+.poster-grid {
+    display: grid;
+    column-gap:1.5em;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 2em;
+    row-gap: 2em;
+}
+
+.poster-image {
+    border: 5px solid #FFF;
+    border-radius: 15px;
+    width: 90%;
+}
+
+.poster-image:hover {
+    border-color: #C24040;
+    transition-duration: 500ms;
+    transform: translate(10px, -10px);
+}
+
+@media (min-width: 40em) {
+    .poster-grid {
+        column-gap: 1em;
+        grid-template-columns: repeat(5, 1fr);
+        row-gap: 1em;
+    }
+}

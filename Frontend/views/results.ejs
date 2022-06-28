@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie Recommender</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Montserrat:wght@100;300;400;500;900&family=Prompt:ital@0;1&family=Titillium+Web:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/results.css">
+</head>
+<body>
+
+
+  <!-- Heading and search box section -->
+
+  <header>
+    <h1>Movie Recommender</h1>
+    <div class="search-box">
+      <form action="/" method="post" autocomplete="off">
+      <input id="input" type="text" name="movie_title" placeholder="<%= movieDetails.title %>">
+        <button type="submit" class="btn">Recommend</button>
+      </form>
+      <div id="autocomplete"></div>
+    </div>
+  </header>
+
+
+  <!-- Movie Details Section -->
+
+  <section>
+    <div class="container">
+      <div class="details-grid">
+        <img id="details-poster" class="grid-row-span-2" src="<%= movieDetails.poster %>" alt="<%= movieDetails.title %> poster">
+        <div class="details-container grid-col-span-2">
+          <h2 class="h2-padded"><%= movieDetails.title %></h2>
+          <div class="h4-padded">
+            <h4>Released: <%= movieDetails.year %></h4>
+            <h4>Director: <em><%= movieDetails.director %></em></h4>
+          </div>
+          <p class="text-left"><%= movieDetails.description %></p>
+        </div>
+        <iframe class="grid-col-span-2" id="youtube-embed" width="560" height="315" src="https://www.youtube.com/embed/<%= movieDetails.videoId %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- Cast Details -->
+
+  <section>
+    <div class="container">
+      <h2>Cast</h2>
+      <div class="actor-grid">
+        <% for (var i=0; i < movieDetails.cast.length; i++) { %>
+          <div class="actor">
+            <img class="actor-image" src="<%= movieDetails.castImages[i] %>" alt="<% movieDetails.cast[i] %>">
+            <div class="actor-info-container">
+              <div class="actor-info">
+                <span class="actor-name"><%= movieDetails.cast[i] %></span>
+                <br>
+                <span class="character-name"><%= movieDetails.characters[i] %></span>
+              </div>
+            </div>
+          </div>
+        <% } %>
+    </div>
+  </section>
+
+
+  <!-- Recommended Movies -->
+
+  <section>
+    <div class="container">
+      <h2>Similar Movies</h2>
+      <div class="poster-grid">
+        <% for (var i=0; i< moviePosters.length; i++) { %>
+          <div>
+            <img class="poster-image" src="<%= moviePosters[i] %>" alt="<%= recommendations[i] %>">
+          </div>
+        <% } %>
+      </div>
+    </div>
+  </section>
+
+
+  <script src="js/search_box.js"></script>
+</body>
+</html>
