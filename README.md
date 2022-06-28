@@ -1,7 +1,8 @@
-<div alig="center">
+<div align="center">
   <h1>Movie Recommender</h1>
 </div>
 
+## Links
 Deployed Web Application: https://la-movie-recommender.herokuapp.com/
 <br>
 Deployed Flask API: https://la-movie-recommender-api.herokuapp.com/
