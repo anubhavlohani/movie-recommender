@@ -21,4 +21,4 @@ A <strong>content-based</strong> movie recommendation web application that let's
 </div>
 
 ## Dataset
-<a href="https://www.kaggle.com/tmdb/tmdb-movie-metadata" rel="nofollow">TMDB 500 Movie Dataset</a>
+<a href="https://www.kaggle.com/tmdb/tmdb-movie-metadata" rel="nofollow">TMDB 5000 Movie Dataset</a>
