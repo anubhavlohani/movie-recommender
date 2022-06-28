@@ -2,6 +2,10 @@
   <h1>Movie Recommender</h1>
 </div>
 
+Deployed Web Application: https://la-movie-recommender.herokuapp.com/
+<br>
+Deployed Flask API: https://la-movie-recommender-api.herokuapp.com/
+
 ## About
 A <strong>content-based</strong> movie recommendation web application that let's you select any movie from a given database and provides information about that movie such as the year of realease, director and cast. On top of that the app, of course, also provides movie recommendations based on the searched movie.
 
